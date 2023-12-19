@@ -107,7 +107,7 @@ const FormTwo = () => {
                 </div>
             </div>}
 
-            {claimInformation && <div style={{ width: "100%", display: "flex", marginTop: "1rem" }}>
+            {claimInformation && <div style={{ width: "100%", display: "flex", marginTop: "2rem" }}>
                 <ProfileCircle
                     size="32"
                     color="#2ccce4"
@@ -119,7 +119,7 @@ const FormTwo = () => {
                 </div>
             </div>}
 
-            {claimInformation && <div className='a2-dropdown-container' style={{ width: "100%", display: "flex", marginTop: "0.5rem" }}>
+            {claimInformation && <div className='a2-dropdown-container' style={{ width: "100%", display: "flex", marginTop: "2rem", marginLeft: "1rem" }}>
                 <ProfileCircle
                     size="32"
                     color="#2ccce4"

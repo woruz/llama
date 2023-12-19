@@ -18,6 +18,37 @@ export const convert_array_to_object_for_dropdown_data_not_for_llama_form = (inp
     return result_array
 }
 export const utils_data_for_form = {
+    dropdown_style: {
+        control: (provided) => ({
+            ...provided,
+            // Set the minimum height of the control
+            height: '30px',
+            minHeight: '30px'    // Set the height of the control
+        }),
+        dropdownIndicator: (provided) => ({
+            ...provided,
+            color: 'white',          // Set the color of the arrow icon
+            backgroundColor: '#5957FF', // Set the background color of the arrow icon
+            padding: '1px',
+            marginRight: '1px',
+            marginBottom: '5px',
+            borderRadius: '10%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+        }),
+        menu: (provided) => ({
+            ...provided,
+            textAlign: 'left',  // Align the text to the left within the dropdown menu
+            maxHeight: '150px', // Set the maximum height for the dropdown menu
+            overflow: 'hidden', // Hide the scrollbar
+        }),
+        singleValue: (provided) => ({
+            ...provided,
+            textAlign: 'left',
+            marginBottom: '5px'
+        }),
+    },
     company_name_or_location: [
         "Belfor Abbotsford",
         "Belfor Brockville",

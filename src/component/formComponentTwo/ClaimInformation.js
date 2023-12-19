@@ -24,45 +24,51 @@ const ClaimInformation = ({
     province,
     postalCode
 }) => {
-    const formik = useFormik({
-        initialValues: {
-            email: '',
-            phoneNumber: '',
-            lossAddress: '',
-        },
-        onSubmit: (values) => {
-            console.log('Form data:', values);
-            setEmail(values.email)
-            setLossAddress(values.lossAddress)
-            setName(values.name)
-            setPhonenumber(values.phoneNumber)
-            setPostalCode(values.postal)
-        },
-    });
+
+    const customStyles = utils_data_for_form.dropdown_style;
 
     const handle_countries_change = (data) => {
-        console.log({data})
         setCountry(data.label)
     }
 
     const handle_province_change = (data) => {
-        console.log({data})
         setProvince(data.label)
+    }
+
+    const handle_name_change = (data) => {
+        setName(data.target.value)
+    }
+
+    const handle_phone_number_change = (data) => {
+        setPhonenumber(data.target.value)
+    }
+
+    const handle_email_change = (data) => {
+        setEmail(data.target.value)
+    }
+
+    const handle_loss_address_change = (data) => {
+        setLossAddress(data.target.value)
+    }
+
+    const handle_postal_code_change = (data) => {
+        setPostalCode(data.target.value)
     }
     
     return (
         <>
-            <form onSubmit={formik.handleSubmit} className="claim-information-form">
-            <p style={{ display: "flex", padding: "0", margin: "0", alignItems: "center", marginLeft: "1rem", marginBottom: "1rem", color: "#1B2559" }}><strong>Claim Information</strong></p>
+            <div className="claim-information-form">
+                <p style={{ display: "flex", padding: "0", margin: "0", alignItems: "center", marginLeft: "1rem", marginBottom: "1rem", color: "#1B2559" }}><strong>Claim Information</strong></p>
                 <div className="form-row-1">
                     <div className="form-column-1">
-                        <label htmlFor="name">Name:</label>
+                        <label style={{width: "10%"}} htmlFor="name">Name:</label>
                         <input
                             type="text"
                             id="name"
                             name="name"
-                            onChange={formik.handleChange}
-                            value={formik.values.name}
+                            onChange={handle_name_change}
+                            value={name}
+                            placeholder='Type here'
                         />
                     </div>
 
@@ -72,21 +78,23 @@ const ClaimInformation = ({
                             type="text"
                             id="phoneNumber"
                             name="phoneNumber"
-                            onChange={formik.handleChange}
-                            value={formik.values.phoneNumber}
+                            onChange={handle_phone_number_change}
+                            value={phoneNumber}
+                            placeholder='Type here'
                         />
                     </div>
                 </div>
 
                 <div className="form-row-1">
                     <div className="form-column-1">
-                        <label htmlFor="name">Email:</label>
+                        <label style={{width: "10%"}} htmlFor="name">Email:</label>
                         <input
                             type="text"
                             id="email"
                             name="email"
-                            onChange={formik.handleChange}
-                            value={formik.values.email}
+                            onChange={handle_email_change}
+                            value={email}
+                            placeholder='Type here'
                         />
                     </div>
                     <div className="form-column-1">
@@ -95,8 +103,9 @@ const ClaimInformation = ({
                             type="text"
                             id="lossAddress"
                             name="lossAddress"
-                            onChange={formik.handleChange}
-                            value={formik.values.lossAddress}
+                            onChange={handle_loss_address_change}
+                            value={lossAddress}
+                            placeholder='Type here'
                         />
                     </div>
                 </div>
@@ -107,7 +116,7 @@ const ClaimInformation = ({
                             <label htmlFor="country">Country:</label>
                         </div>
                         <div className='form-row-2-dropdown'>
-                            <Select options={option_countries} onChange={handle_countries_change} />
+                            <Select options={option_countries} onChange={handle_countries_change} styles={customStyles} />
                         </div>
                     </div>
                     <div className='form-column-2'>
@@ -115,7 +124,7 @@ const ClaimInformation = ({
                             <label htmlFor="province">Province:</label>
                         </div>
                         <div className='form-row-2-dropdown'>
-                            <Select options={option_province} onChange={handle_province_change} />
+                            <Select options={option_province} onChange={handle_province_change} styles={customStyles} />
                         </div>
                     </div>
                 </div>
@@ -127,16 +136,13 @@ const ClaimInformation = ({
                             type="text"
                             id="postal"
                             name="postal"
-                            onChange={formik.handleChange}
-                            value={formik.values.postal}
+                            onChange={handle_postal_code_change}
+                            value={postalCode}
+                            placeholder='Type here'
                         />
                     </div>
                 </div>
-                <div className="claim-information-button">
-                    {
-                        <button type="submit">Submit</button>}
-                </div>
-            </form>
+            </div>
         </>
     )
 }

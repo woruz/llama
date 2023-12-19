@@ -8,7 +8,7 @@ const options = convert_array_to_object_for_dropdown_data_not_for_llama_form(uti
 
 
 const A1DropDown = ({setA1Dropdown, a1Dropdown}) => {
-
+  const customStyles = utils_data_for_form.dropdown_style;
   const handle_change = (data) => {
     const {label, value} = data
     setA1Dropdown(label)
@@ -20,7 +20,7 @@ const A1DropDown = ({setA1Dropdown, a1Dropdown}) => {
             <p style={{padding: "0", margin: "0", fontWeight: 700, fontSize: "14px", color: "#1B2559", lineHeight: "24px"}}>Company Name/Location:</p>
         </div>
         <div style={{marginBottom: "1rem", width: "20rem"}}>
-            <Select options={options} onChange={handle_change} />
+            <Select options={options} onChange={handle_change} styles={customStyles} />
         </div>
     </div>
   );
