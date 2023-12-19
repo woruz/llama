@@ -7,6 +7,16 @@ export const convert_array_to_object_for_dropdown_data = (input_array) => {
 
     return result_obj
 }
+
+export const convert_array_to_object_for_dropdown_data_not_for_llama_form = (input_array) => {
+    const result_array = []
+    console.log({ input_array })
+    input_array.forEach(element => {
+        result_array.push({value: element.split(" ").join("-").toLowerCase(), label: element})
+    })
+
+    return result_array
+}
 export const utils_data_for_form = {
     company_name_or_location: [
         "Belfor Abbotsford",

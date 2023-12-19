@@ -12,7 +12,7 @@ const ClaimInformation = ({setClaimInformation}) => {
         <LlamaForm
             schema={{
                 type: 'object',
-                // description: 'Requester Name:',
+                description: 'Claim Information:',
                 wizard: false,
                 properties: {
                     name: {
@@ -20,7 +20,7 @@ const ClaimInformation = ({setClaimInformation}) => {
                         required: true,
                     },
                     phoneNumber: {
-                        type: "number",
+                        type: "string",
                         required: true
                     },
                     email: {
@@ -47,7 +47,7 @@ const ClaimInformation = ({setClaimInformation}) => {
                         enum: convert_array_to_object_for_dropdown_data(utils_data_for_form.canada_provinces),
                     },
                     postalCode: {
-                        type: "number",
+                        type: "string",
                         required: true
                     },
                     type_of_loss: {
@@ -65,11 +65,11 @@ const ClaimInformation = ({setClaimInformation}) => {
                         required: true,
                     },
                     claim_number: {
-                        type: 'number',
+                        type: 'string',
                         required: true,
                     },
                     policy_number: {
-                        type: 'number',
+                        type: 'string',
                         required: true,
                     },
                 }
@@ -87,7 +87,7 @@ const ClaimInformation = ({setClaimInformation}) => {
                         readOnly: false,
                     },
                     phoneNumber: {
-                        type: "number",
+                        type: "text",
                         label: "Phone Number:",
                         // description: "Select Your Requester Name",
                         // placeholder: "Select Your Requester Name",
@@ -135,7 +135,7 @@ const ClaimInformation = ({setClaimInformation}) => {
                         readOnly: false,
                     },
                     postalCode: {
-                        type: "number",
+                        type: "text",
                         label: "Postal Code:",
                         // description: "Select Your Requester Name",
                         // placeholder: "Select Your Requester Name",
@@ -167,7 +167,7 @@ const ClaimInformation = ({setClaimInformation}) => {
                         readOnly: false,
                     },
                     claim_number: {
-                        type: "number",
+                        type: "text",
                         label: "Claim Number:",
                         // description: "Select Your Requester Name",
                         // placeholder: "Select Your Requester Name",
@@ -175,7 +175,7 @@ const ClaimInformation = ({setClaimInformation}) => {
                         readOnly: false,
                     },
                     policy_number: {
-                        type: "number",
+                        type: "text",
                         label: "Policy Number:",
                         // description: "Select Your Requester Name",
                         // placeholder: "Select Your Requester Name",

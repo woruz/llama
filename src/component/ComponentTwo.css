@@ -1,0 +1,236 @@
+.a1-dropdown-container  {
+    background-color: #fff;
+    padding: 0;
+}
+
+.a1-dropdown-container .a1-dropdown {
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 14px 27px 45px 4px rgba(112, 144, 176, 0.2);
+}
+
+.a1-dropdown-container .a1-dropdown {
+    display: flex;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+}
+
+.a2-dropdown-component-2 {
+    margin-bottom: 1rem;
+}
+
+.a2-dropdown-container  {
+    background-color: #fff;
+    padding: 0;
+}
+
+.a2-dropdown-container .a2-dropdown {
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 14px 27px 45px 4px rgba(112, 144, 176, 0.2);
+}
+
+.a2-dropdown-container .a2-dropdown {
+    display: flex;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+}
+
+.a2-dropdown-component-2 {
+    margin-bottom: 1rem;
+}
+
+
+
+.custom-dropdown {
+    position: relative; /* Make the container relative for positioning the icon */
+    width: 100%;
+    height: 1rem;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff; /* Set the background color for the dropdown */
+  }
+  
+  .custom-dropdown:hover {
+    border-color: #555;
+  }
+  
+  .custom-dropdown:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Style the dropdown arrow icon */
+  .custom-dropdown::after {
+    content: '\25BC'; /* Unicode character for a down arrow */
+    font-size: 14px;
+    color: #fff; /* Set the color of the dropdown icon */
+    background-color: #007bff; /* Set the background color of the dropdown icon */
+    padding: 8px;
+    border-radius: 0 5px 5px 0; /* Adjust the border-radius to match the dropdown */
+    position: absolute; /* Position the icon absolutely within the container */
+    top: 50%; /* Align the top of the icon to the middle of the container */
+    transform: translateY(-50%); /* Center the icon vertically */
+    right: 0; /* Align the icon to the right side of the container */
+  }
+
+
+.claim-information-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row-1 {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.form-column-1 {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 1.5rem;
+}
+
+.form-column-1  label {
+    font-weight: 400;
+    font-size: 16px;
+    white-space: nowrap;
+    width: 30%;
+    margin: 0;
+    padding: 0;
+}
+
+.form-column-1 input {
+    width: 50%;
+}
+
+.form-row-2 {
+    display: flex;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 5rem;
+}
+
+.form-column-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 1rem;
+}
+
+.form-column-2  label {
+    font-weight: 400;
+    font-size: 16px;
+    white-space: nowrap;
+    width: 30%;
+    margin: 0;
+    justify-content: flex-start; 
+}
+
+.form-row-2-dropdown {
+    width: 100%;
+    height: 0rem;
+}
+
+.form-row-2-label {
+    text-align: initial;
+}
+
+.form-row-3 {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.form-column-3 {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    width: 50%;
+    height: 1.5rem;
+    margin-left: 1rem;
+}
+
+.form-column-3  label {
+    font-weight: 400;
+    font-size: 16px;
+    white-space: nowrap;
+    width: 30%;
+    margin: 0;
+    padding: 0;
+}
+
+.form-column-3 input {
+    width: 50%;
+}
+
+.claim-information-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.claim-information-button button {
+    background-color: transparent;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    width: 5rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.claim-information-button button:hover {
+    background-color: #007bff; /* Hover background color */
+    color: #fff; /* Hover text color */
+    border-color: #007bff; /* Hover border color */
+  }
+
+  .type-loss-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 1rem;
+}
+
+
+  .type-loss-2 {
+    display: flex;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.type-loss-column-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 1rem;
+}
+
+.type-loss-column-2  label {
+    font-weight: 400;
+    font-size: 16px;
+    white-space: nowrap;
+    width: 30%;
+    margin: 0;
+    justify-content: flex-start; 
+}
+
+.type-loss-2-dropdown {
+    width: 100%;
+}
+
+.type-loss-2-label {
+    text-align: initial;
+}
