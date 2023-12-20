@@ -23,15 +23,15 @@ export const utils_data_for_form = {
             ...provided,
             // Set the minimum height of the control
             height: '30px',
-            minHeight: '30px'    // Set the height of the control
+            minHeight: '40px'    // Set the height of the control
         }),
         dropdownIndicator: (provided) => ({
             ...provided,
             color: 'white',          // Set the color of the arrow icon
             backgroundColor: '#5957FF', // Set the background color of the arrow icon
-            padding: '1px',
-            marginRight: '1px',
-            marginBottom: '5px',
+            padding: '2px',
+            marginRight: '5px',
+            marginBottom: '3px',
             borderRadius: '10%',
             display: 'flex',
             justifyContent: 'center',
