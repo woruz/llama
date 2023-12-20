@@ -51,16 +51,16 @@ const Sidebar = ({children}) => {
                               <NavLink to="/adminPages">Admin Pages</NavLink>
                               <ul className="nested-li" style={{padding: 0}}>
                                   <li>
-                                      <NavLink style={{fontWeight: 500, fontSize: "14px"}} to="/adminPages/allTemplate">All Template</NavLink>
+                                      <NavLink style={{fontWeight: 500, fontSize: "14px", whiteSpace: "nowrap"}} to="/adminPages/allTemplate">All Template</NavLink>
                                   </li>
                                   <li>
-                                      <NavLink style={{fontWeight: 500, fontSize: "14px"}} to="/adminPages/newTemplate">New Template</NavLink>
+                                      <NavLink style={{fontWeight: 500, fontSize: "14px",  whiteSpace: "nowrap"}} to="/adminPages/newTemplate">New Template</NavLink>
                                   </li>
                                   <li>
-                                      <NavLink style={{fontWeight: 500, fontSize: "14px"}} to="/adminPages/editTemplate">Edit Template</NavLink>
+                                      <NavLink style={{fontWeight: 500, fontSize: "14px",  whiteSpace: "nowrap"}} to="/adminPages/editTemplate">Edit Template</NavLink>
                                   </li>
                                   <li>
-                                      <NavLink style={{fontWeight: 500, fontSize: "14px"}} to="/adminPages/usersOverview">Users Overview</NavLink>
+                                      <NavLink style={{fontWeight: 500, fontSize: "14px",  whiteSpace: "nowrap"}} to="/adminPages/usersOverview">Users Overview</NavLink>
                                   </li>
                               </ul>
                           </div>

@@ -22,7 +22,9 @@ const ClaimInformation = ({
     lossAddress,
     country,
     province,
-    postalCode
+    postalCode,
+    setLoading,
+    setComponentName
 }) => {
 
     const customStyles = utils_data_for_form.dropdown_style;

@@ -7,11 +7,16 @@ import Select from 'react-select'
 const options = convert_array_to_object_for_dropdown_data_not_for_llama_form(utils_data_for_form.company_name_or_location)
 
 
-const A1DropDown = ({setA1Dropdown, a1Dropdown}) => {
+const A1DropDown = ({setA1Dropdown, setLoading,setComponentName}) => {
   const customStyles = utils_data_for_form.dropdown_style;
   const handle_change = (data) => {
     const {label, value} = data
-    setA1Dropdown(label)
+    setLoading(true)
+    setComponentName("A1Dropdown")
+    setTimeout(() => {
+      setA1Dropdown(label)
+      setLoading(false)
+    }, 1000);
   }
   
   return (
